@@ -1,10 +1,9 @@
-//camel case
 import 'dart:math';
 class Game {
   int answer = 0; //instance field
-  Game() {
+  Game({int maxRandom = 100}) {
     var r = Random();
-    answer = r.nextInt(100) + 1;
+    answer = r.nextInt(maxRandom) + 1;
     print('answer is $answer');
   }
   int doGuess(int num) {
